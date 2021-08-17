@@ -19,6 +19,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Title
 st.title('Autoplot Maker And Predictor')
+st.subheader('To Upload a file please click on the [ > ] button which is at top left')
 st.sidebar.markdown("""
 # Upload a .csv file 
 # (.xlsx file will be supportred in the future)

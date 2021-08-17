@@ -2,7 +2,6 @@ import os
 import time
 import sys
 import matplotlib
-matplotlib.use("TKAgg")
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st

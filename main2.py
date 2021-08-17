@@ -32,6 +32,10 @@ file_name = st.sidebar.file_uploader("Select a file to upload")
 # Asking start
 X = st.text_input('[?] please enter the data table heading which you want to show in x axis = ')
 y = st.text_input('[?] please enter the data table heading which you want to show in y axis = ')
+
+y2 = st.text_input('[?] please enter the data table heading which you want to show in y2 axis = (optional)')
+
+
 x_label = st.text_input('[?] please enter the x axis label = ')
 y_label = st.text_input('[?] please enter the y axis label = ')
 heading = st.text_input('[?] please enter the heading of the graph = ')
@@ -61,16 +65,26 @@ if st.button('Plot Graph'):
     fig= plt.figure()
     
     if type_graph == '1. Line Plot ':
-        plt.plot(df[X], df[y])
+        plt.plot(df[X], df[y], label=y)
+        try:
+            plt.plot(df[X], df[y2],label = y2)
+        except:
+            pass
         plt.xlabel(x_label)
         plt.ylabel(y_label)
         plt.title(heading)
+        plt.legend()
         st.pyplot(fig)
     elif type_graph == '2. Scatter Plot':
-        plt.scatter(df[X], df[y])
+        plt.scatter(df[X], df[y], label=y)
+        try:
+            plt.scatter(df[X], df[y2],label = y2)
+        except:
+            pass
         plt.xlabel(x_label)
         plt.ylabel(y_label)
         plt.title(heading)
+        plt.legend()
         st.pyplot(fig)
     elif type_graph == '3. Histogram':
         plt.hist(df[y])
@@ -86,14 +100,23 @@ if st.button('Plot Graph'):
         st.pyplot(fig)
     elif type_graph == '5. Bar Plot':
         plt.bar(df[X], df[y])
+        try:
+            plt.bar(df[X], df[y2])
+        except:
+            pass
         plt.xlabel(x_label)
         plt.ylabel(y_label)
         plt.title(heading)
         st.pyplot(fig)
     elif type_graph == '6. Pie Chart':
         plt.pie(df[y], labels=df[X])
+        plt.xlabel(x_label)
+        plt.ylabel(y_label)
         plt.title(heading)
         st.pyplot(fig)
+    else:
+        st.error('Error')
+
     
     if save_graph:
         if os.path.exists(save_graph_name):

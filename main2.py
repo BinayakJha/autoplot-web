@@ -22,6 +22,7 @@ st.title('Autoplot Maker And Predictor')
 st.subheader('To Upload a file please click on the [ > ] button which is at top left (for mobile)')
 st.write(' ')
 st.write(' ')
+st.write(' ')
 st.sidebar.markdown("""
 # Upload a .csv file 
 (.xlsx file will be supportred in the future)

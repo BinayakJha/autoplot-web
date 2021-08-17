@@ -24,8 +24,8 @@ st.write(' ')
 st.write(' ')
 st.write(' ')
 st.sidebar.markdown("""
-# Upload a .csv file 
-(.xlsx file will be supportred in the future)
+# Upload a .csv/.xlsx file
+(other types of file will be supported in the future) 
 """)
 file_name = st.sidebar.file_uploader("Select a file to upload")
 

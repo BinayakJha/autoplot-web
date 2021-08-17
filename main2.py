@@ -53,7 +53,10 @@ st.write('')
 # plot graph function start
 
 if st.button('Plot Graph'):
-    df = pd.read_csv(file_name)
+    try:
+        df = pd.read_csv(file_name)
+    except (FileNotFoundError, IOError) as e:
+        df = pd.read_excel(file_name)
     st.write('Plotting...')
     fig= plt.figure()
     

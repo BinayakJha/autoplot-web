@@ -32,8 +32,8 @@ file_name = st.sidebar.file_uploader("Select a file to upload")
 # Asking start
 X = st.text_input('[?] please enter the data table heading which you want to show in x axis = ')
 y = st.text_input('[?] please enter the data table heading which you want to show in y axis = ')
-
-y2 = st.text_input('[?] please enter the data table heading which you want to show in y2 axis = (optional)')
+# another line in smae axis
+y2 = st.text_input('[?] please enter the another data table heading which you want to show in y axis = (optional)')
 
 
 x_label = st.text_input('[?] please enter the x axis label = ')

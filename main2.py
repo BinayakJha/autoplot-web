@@ -15,9 +15,14 @@ hide_streamlit_style = """
             
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+# upload a file button
+
 # Title
 st.title('Autoplot Maker And Predictor')
-filepath = st.text_input('Please enter the file path here (note: do not give a path or anything else we will find the file itself :) = ')
+st.sidebar.markdown("""
+# Upload a file
+""")
+file_name = st.sidebar.file_uploader("Select a file to upload")
 
 # Asking start
 X = st.text_input('[?] please enter the data table heading which you want to show in x axis = ')
@@ -43,7 +48,7 @@ st.write('')
 # plot graph function start
 
 if st.button('Search file and Plot Graph'):
-    df = pd.read_csv(filepath)
+    df = pd.read_csv(file_name)
     st.write('Plotting...')
     fig= plt.figure()
     

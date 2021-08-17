@@ -33,7 +33,7 @@ file_name = st.sidebar.file_uploader("Select a file to upload")
 X = st.text_input('[?] please enter the data table heading which you want to show in x axis = ')
 y = st.text_input('[?] please enter the data table heading which you want to show in y axis = ')
 # another line in smae axis
-y2 = st.text_input('[?] please enter the another data table heading which you want to show in y axis = (optional)')
+y2 = st.text_input('[?] please enter the another data table heading which you want to show in y axis = (optional) [this will add another plot in the same graph)')
 
 
 x_label = st.text_input('[?] please enter the x axis label = ')

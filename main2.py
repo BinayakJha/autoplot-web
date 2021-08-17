@@ -48,7 +48,7 @@ st.write('')
 
 # plot graph function start
 
-if st.button('Search file and Plot Graph'):
+if st.button('Plot Graph'):
     df = pd.read_csv(file_name)
     st.write('Plotting...')
     fig= plt.figure()
@@ -100,7 +100,7 @@ st.write('')
 st.write('')
 save_math = st.checkbox('Maths( Statistics )')
 if save_math:
-    df = pd.read_csv(filepath)
+    df = pd.read_csv(file_name)
     st.write('Please select a number from list:')
     st.write('1. Standard Deviation')
     st.write('2. Mean')
@@ -156,7 +156,7 @@ st.write('')
 st.write('')
 prediction = st.checkbox('Prediction')
 if prediction:
-    df = pd.read_csv(filepath)
+    df = pd.read_csv(file_name)
     st.write('Still In development ..')
     st.write('1. Linear Regression')
     if st.button('Predict'):

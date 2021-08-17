@@ -97,7 +97,8 @@ if st.button('Plot Graph'):
             st.write('File already exists')
         plt.savefig(save_graph_name)
 
-  
+# make a box where users create a table
+
 # # math statistics function start
 st.write('')
 st.write('')

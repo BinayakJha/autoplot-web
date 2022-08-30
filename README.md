@@ -9,7 +9,7 @@ A simple web that makes different types of the plot using the provided CSV or XL
 At first clone the repository
 
 ```
-git clone https://github.com/BinayakJha/ImageScraper.git
+git clone https://github.com/BinayakJha/autoplot-web.git
 ```
 
 Now after you have cloned then you should have Python installed.
